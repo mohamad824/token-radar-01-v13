@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Token Radar v13 — Expected Value</title><link rel="stylesheet" href="app.css"></head><body>
+<header><h1>TOKEN RADAR <span>v13 · Expected Value</span></h1><p>198 pre-token · snapshot 2026-11-14 · A lam30 · odds 50/30/20</p>
+<nav><button data-tab="board" class="on">Board</button><button data-tab="evidence">Evidence</button><button data-tab="calendar">Calendar</button></nav></header>
+<main id="boardpage">
+<div id="kpi" class="kpi"></div>
+<p id="judge"><b>READ:</b> 198 pre-token protocols ranked by expected launch value (implied × launch odds), not implied alone. Total EV $871,371,675 of $1,768,900,562 implied. <b>MODEL:</b> A ridge lam30 on 92 traded comps; TVL, 7d growth, category only; cap 2.87× (0 bound). <b>VERIFY:</b> click a row → Rebuild. <b>TEST (A):</b> mean WF ×/5.45, med WF ×/4.11, mean LOO ×/4.71, med LOO ×/3.43. <b>ODDS:</b> ensemble 50/30/20 beats base (Brier 0.226/0.214/0.208 vs 0.249/0.248/0.250). <b>RANGE:</b> inner 49% (target 50%), outer 78% (target 80%); 29 flagged. 758 accounted.</p>
+<div id="tiles" class="tiles"></div>
+<p id="narrative" class="narr"></p>
+<p id="flag" class="flag"></p>
+<p id="evstrip" class="ev"></p>
+<p id="integrity" class="int"></p>
+<div class="filters">
+<input id="q" type="search" placeholder="Search name or slug…">
+<button data-f="verdict:FARM">FARM</button><button data-f="verdict:MARGINAL">MARGINAL</button><button data-f="verdict:SKIP">SKIP</button>
+<button data-f="tier:HIGH">HIGH odds</button><button data-f="tier:MED">MED</button><button data-f="tier:LOW">LOW</button>
+<select id="fcat"></select>
+<button data-f="band:lo">&lt;1×</button><button data-f="band:mid">1–5×</button><button data-f="band:hi">&gt;5×</button>
+<button data-f="sig:surging">surging</button><button data-f="sig:sliding">sliding</button><button data-f="sig:watchlist">watchlist</button>
+<label><input id="fwatch" type="checkbox"> watchlist only</label>
+<label><input id="fgrey" type="checkbox"> grey zone only</label>
+<button id="choosertoggle">Columns</button><button id="density">Density</button>
+<button id="expjson">JSON</button><button id="expcsv">CSV</button>
+</div>
+<div id="chooser" class="chooser" hidden></div>
+<div class="sim"><b>Simulator D-13:</b> haircut <input id="simh" type="range" min="0" max="90" value="0"> <span id="simhval">0%</span> · drop <input id="simd" type="range" min="0" max="20" value="7"> <span id="simdval">7%</span> <button id="simreset">Reset</button></div>
+<div class="tscroll"><table><thead id="thead"></thead><tbody id="tbody"></tbody></table></div>
+<p id="totals" class="tot"></p>
+<button id="showall">Show all 198</button>
+<div id="detail" hidden></div>
+</main>
+<section id="evidence" hidden></section>
+<section id="calendar" hidden></section>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body></html>
